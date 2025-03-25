@@ -14,9 +14,10 @@ public class Main {
         ExecutorService executor = Executors.newFixedThreadPool(100);
 
         for (int i = 0; i < tasksCount; i++) {
+            // unsafe:
             executor.submit(() -> {
-                counter1++;
-                counter2++;
+                counter1++; // non-atomic
+                counter2++; // non-atomic
                 latch.countDown();
             });
         }

@@ -25,7 +25,7 @@ public class Main_UseAtomicInteger {
 
         latch.await();
 
-        System.out.println(counter1); // non-atomic
+        System.out.println(counter1);
         System.out.println(counter2);
         System.exit(0);
     }

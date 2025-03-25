@@ -18,6 +18,7 @@ public class Main_LockedCodeBlock {
 
         for (int i = 0; i < tasksCount; i++) {
             executor.submit(() -> {
+                // safe:
                 locker.lock(); // !
                 try {
                     // unsafe:

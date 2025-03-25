@@ -16,6 +16,7 @@ public class Main_SynchronizedCodeBlock {
 
         for (int i = 0; i < tasksCount; i++) {
             executor.submit(() -> {
+                // safe:
                 synchronized (latch) {
                     // unsafe:
                     counter1++; // non-atomic
