@@ -12,7 +12,7 @@ public class SingletonLogger {
     private final Map<String, Integer> freqs = new ConcurrentHashMap<>();
     private final Map<UUID, Log> logs = new ConcurrentHashMap<>();
 
-    public SingletonLogger() { }
+    private SingletonLogger() { }
 
     public static SingletonLogger getInstance() {
         if (INSTANCE == null) {
